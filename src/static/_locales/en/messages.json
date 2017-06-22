@@ -1,0 +1,11 @@
+{
+  "site": {
+    "message": "Site"
+  },
+  "category": {
+    "message": "Category"
+  },
+  "setting": {
+    "message": "Setting"
+  }
+}
