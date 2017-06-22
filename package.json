@@ -1,0 +1,55 @@
+{
+  "name": "chrome extension skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build_watch": "npm-watch build",
+    "start": "node index.js",
+    "build": "npm-run-all build-src build-manifest build-key build-extension",
+    "build-key": "crx pack build",
+    "build-manifest": "node ./build.js --file ./build/dist/manifest.js",
+    "build-src": "webpack",
+    "build-extension": "webpack --config webpack.config.extension.js",
+    "upload": "node ./upload.js",
+    "copy": "node ./copy.js"
+  },
+  "watch": {
+    "build": {
+      "patterns": "src"
+    }
+  },
+  "author": "Unicon.uz",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.2",
+    "bower-webpack-plugin": "^0.1.9",
+    "crx-webpack-plugin": "^0.1.5",
+    "css-class-prefixer-loader": "^1.0.2",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.10.0",
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "html-loader": "^0.4.5",
+    "jsdoc": "^3.4.3",
+    "npm-run-all": "^4.0.2",
+    "postcss-class-prefix": "^0.3.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-prefixer": "^2.0.5",
+    "posthtml": "^0.9.2",
+    "posthtml-load-config": "^1.0.0",
+    "posthtml-loader": "^0.11.0",
+    "posthtml-prefix-class": "^1.0.5",
+    "request": "^2.81.0",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^2.0.0",
+    "webpack": "^2.2.1",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-postcss-tools": "^1.1.2",
+    "html-webpack-plugin": "^2.28.0",
+    "generate-json-webpack-plugin": "^0.2.1",
+    "copy-webpack-plugin": "^4.0.1"
+  },
+  "dependencies": {}
+}
